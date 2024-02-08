@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PassengerCountSensorLib\PassengerCountSensorLib.csproj" />
+    <ProjectReference Include="..\TempCalculatorLib\TempCalculatorLib.csproj" />
+    <ProjectReference Include="..\TemperatureThresholdSensorLib\TemperatureThresholdSensorLib.csproj" />
+  </ItemGroup>
+
 </Project>

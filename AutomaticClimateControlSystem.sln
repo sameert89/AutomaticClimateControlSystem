@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomaticClimateControlSystem", "AutomaticClimateControlSystem\AutomaticClimateControlSystem.csproj", "{CA8E2B79-C3DD-43BD-9AC6-7CC22E8F67AC}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Driver", "Driver\Driver.csproj", "{9C74A5B5-DFD4-4E28-8961-FC33334E88D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISubscriberLib", "ISubscriberLib\ISubscriberLib.csproj", "{18BF2456-E185-48F5-9649-441F76ED7AEE}"
@@ -31,10 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CA8E2B79-C3DD-43BD-9AC6-7CC22E8F67AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA8E2B79-C3DD-43BD-9AC6-7CC22E8F67AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA8E2B79-C3DD-43BD-9AC6-7CC22E8F67AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA8E2B79-C3DD-43BD-9AC6-7CC22E8F67AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9C74A5B5-DFD4-4E28-8961-FC33334E88D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9C74A5B5-DFD4-4E28-8961-FC33334E88D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C74A5B5-DFD4-4E28-8961-FC33334E88D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
