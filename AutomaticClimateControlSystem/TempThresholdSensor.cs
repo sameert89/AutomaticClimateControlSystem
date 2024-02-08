@@ -2,9 +2,9 @@
 {
     public class TempThresholdSensor(IEventAggregator eventAggregator)
     {
-        // private float thresholdTemp = tempVal;
-        public float currentTemp;
-        private readonly IEventAggregator eventAggregator = eventAggregator;
+    public class TempThresholdSensor(IEventAggregator eventAggregator, float tempVal)
+    {
+        private float thresholdTemp = tempVal;
 
         public void HandleTempThresholdChange() {
             eventAggregator.Publish(new TempThresholdExceededEvent(currentTemp));
