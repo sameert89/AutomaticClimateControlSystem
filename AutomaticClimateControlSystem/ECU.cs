@@ -14,7 +14,7 @@ namespace AutomaticClimateControlSystem
         public void NotifyNewTemperature(double newTemperature)
         {
             _acUnit.CurrentTemperature = newTemperature;
-            Console.WriteLine("ECU notified about new temperature.");
+            
         }
     }
 }
