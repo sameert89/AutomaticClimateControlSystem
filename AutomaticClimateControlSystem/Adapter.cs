@@ -20,8 +20,8 @@ namespace AutomaticClimateControlSystem
 
             EventHandlerFunctions = new Dictionary<Type, Func<TempCalculator, object, double>>()
             {
-                {typeof(TempThresholdExceededEvent), HandleTempThresholdExceedsEvent },
-                {typeof(PassengerCountChangeEvent), HandleNumPassengersChangedEvent }
+                {typeof(TempThresholdExceededEvent), ClimateEventHandlers.HandleTempThresholdExceedsEvent },
+                {typeof(PassengerCountChangeEvent), ClimateEventHandlers.HandleNumPassengersChangedEvent }
         
             };
             eventAggregator.Subscribe(typeof(TempThresholdExceededEvent), this);
@@ -40,27 +40,6 @@ namespace AutomaticClimateControlSystem
             }
 
         }
-
-        public double HandleTempThresholdExceedsEvent(TempCalculator _tempCalculator, object e)
-        {
-            var @event = e as TempThresholdExceededEvent;
-            double currentTemperature = @event?.CurrentTemp ?? 25;
-
-            return _tempCalculator.CalculateNewTemperature(currentTemperature, _tempCalculator.NumPassengers);
-            
-            
-        }
-
-        public double HandleNumPassengersChangedEvent(TempCalculator _tempCalculator, object e)
-        {
-            var @event = e as PassengerCountChangeEvent;
-            ushort numPassengers = @event?.CurrentPassengerCount ?? 2;
-
-            return _tempCalculator.CalculateNewTemperature(_tempCalculator.CurrentTemperature, numPassengers);
-
-
-        }
-
 
     }
 
