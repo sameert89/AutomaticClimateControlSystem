@@ -2,6 +2,6 @@
 {
     public class PassengerCountChangeEvent(ushort currentPassengerCount)
     {
-        private ushort currentPassengerCount = currentPassengerCount;
+        public ushort CurrentPassengerCount = currentPassengerCount;
     }
 }

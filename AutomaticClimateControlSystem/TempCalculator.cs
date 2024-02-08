@@ -2,7 +2,7 @@
 
 namespace AutomaticClimateControlSystem
 {
-    internal class TempCalculator
+    public class TempCalculator
     {
         private double previousTemperature = 20.0; 
         private int previousNumPassengers = 0; 
@@ -17,7 +17,7 @@ namespace AutomaticClimateControlSystem
             NumPassengers = previousNumPassengers;
         }
 
-        public void CalculateNewTemperature(double currentTemperature, int numPassengers)
+        public double CalculateNewTemperature(double currentTemperature, int numPassengers)
         {
             double temperatureDifference = currentTemperature - previousTemperature;
             int passengersDifference = numPassengers - previousNumPassengers;
@@ -26,12 +26,7 @@ namespace AutomaticClimateControlSystem
 
             previousTemperature = currentTemperature;
             previousNumPassengers = numPassengers;
-        }
-
-
-        private void SetNewTemperature(double newTemperature)
-        {
-            CurrentTemperature = newTemperature;
+            return newTemperature;
         }
     }
 }

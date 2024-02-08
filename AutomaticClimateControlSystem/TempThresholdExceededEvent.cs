@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AutomaticClimateControlSystem
 {
-    public class TempThresholdExceededEvent(float currentTemp, float thresholdTemp)
+    public class TempThresholdExceededEvent(float currentTemp)
     {
-        public float currentTemp = currentTemp;
-        public float thresholdTemp = thresholdTemp;
+        public float CurrentTemp = currentTemp;
+        // public float thresholdTemp = thresholdTemp;
     }
 }
