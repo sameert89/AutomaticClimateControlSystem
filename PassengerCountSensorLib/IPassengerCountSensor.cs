@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoClimateControlTestSuite
+namespace PassengerCountSensorLib
 {
-    public class Fixture<>
+    public interface IPassengerCountSensor
     {
+        public void HandlePassengerCountChange();
     }
 }

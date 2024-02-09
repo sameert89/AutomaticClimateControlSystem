@@ -12,5 +12,7 @@ namespace AutomaticClimateControlSystem
     {
         public void Publish(object @event);
         public void Subscribe(Type eventType, ISubscriber subscriber);
+
+        public Dictionary<Type, List<ISubscriber>> GetSubscribers();
     }
 }

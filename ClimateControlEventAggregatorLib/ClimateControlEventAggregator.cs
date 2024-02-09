@@ -14,6 +14,8 @@ namespace AutomaticClimateControlSystem
 
         private readonly Dictionary<Type, List<ISubscriber>> subscribers = [];
 
+        public Dictionary<Type, List<ISubscriber>> GetSubscribers() { return subscribers; }
+
         public void Publish(object @event)
         {
             var eventType = @event.GetType();
