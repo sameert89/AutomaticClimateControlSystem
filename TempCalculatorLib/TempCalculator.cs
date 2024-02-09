@@ -28,5 +28,6 @@ namespace AutomaticClimateControlSystem
             previousNumPassengers = numPassengers;
             return newTemperature;
         }
+
     }
 }

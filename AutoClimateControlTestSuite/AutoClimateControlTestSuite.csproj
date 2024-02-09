@@ -22,4 +22,17 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClimateControlEventAggregatorLib\ClimateControlEventAggregatorLib.csproj" />
+    <ProjectReference Include="..\Driver\Driver.csproj" />
+    <ProjectReference Include="..\ECUAdapterLib\ECUAdapterLib.csproj" />
+    <ProjectReference Include="..\EventHandlersLib\EventHandlersLib.csproj" />
+    <ProjectReference Include="..\IEventAggregagtorLib\IEventAggregagtorLib.csproj" />
+    <ProjectReference Include="..\InbuiltCarComponentsLib\InbuiltCarComponentsLib.csproj" />
+    <ProjectReference Include="..\ISubscriberLib\ISubscriberLib.csproj" />
+    <ProjectReference Include="..\PassengerCountSensorLib\PassengerCountSensorLib.csproj" />
+    <ProjectReference Include="..\TempCalculatorLib\TempCalculatorLib.csproj" />
+    <ProjectReference Include="..\TemperatureThresholdSensorLib\TemperatureThresholdSensorLib.csproj" />
+  </ItemGroup>
+
 </Project>
