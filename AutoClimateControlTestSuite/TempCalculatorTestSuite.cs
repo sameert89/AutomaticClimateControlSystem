@@ -2,6 +2,7 @@ using AutomaticClimateControlSystem;
 
 namespace AutoClimateControlTestSuite
 {
+
     public class TempCalculatorTestsFixture : IDisposable
     {
         private TempCalculator tempCalculator;

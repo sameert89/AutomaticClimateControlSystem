@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemperatureThresholdSensorL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClimateControlEventAggregatorLib", "ClimateControlEventAggregatorLib\ClimateControlEventAggregatorLib.csproj", "{C30647FB-B8F0-4F6E-9464-814494CA1004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHandlersLib", "EventHandlersLib\EventHandlersLib.csproj", "{71A8ED39-4EBD-49E4-B675-5BBA557DC757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHandlersLib", "EventHandlersLib\EventHandlersLib.csproj", "{71A8ED39-4EBD-49E4-B675-5BBA557DC757}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoClimateControlTestSuite", "AutoClimateControlTestSuite\AutoClimateControlTestSuite.csproj", "{85DBFD98-5ABC-43E9-BAFD-3CCBEB53E394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoClimateControlTestSuite", "AutoClimateControlTestSuite\AutoClimateControlTestSuite.csproj", "{85DBFD98-5ABC-43E9-BAFD-3CCBEB53E394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEventLib", "IEventLib\IEventLib.csproj", "{A5BD8305-A964-4CD6-BB7A-4C64F82AC1DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{85DBFD98-5ABC-43E9-BAFD-3CCBEB53E394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85DBFD98-5ABC-43E9-BAFD-3CCBEB53E394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85DBFD98-5ABC-43E9-BAFD-3CCBEB53E394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5BD8305-A964-4CD6-BB7A-4C64F82AC1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5BD8305-A964-4CD6-BB7A-4C64F82AC1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5BD8305-A964-4CD6-BB7A-4C64F82AC1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5BD8305-A964-4CD6-BB7A-4C64F82AC1DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

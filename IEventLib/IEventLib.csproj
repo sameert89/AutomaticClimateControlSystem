@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\IEventAggregagtorLib\IEventAggregagtorLib.csproj" />
-    <ProjectReference Include="..\IEventLib\IEventLib.csproj" />
-  </ItemGroup>
-
 </Project>

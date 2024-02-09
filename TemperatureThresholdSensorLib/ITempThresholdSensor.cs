@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoClimateControlTestSuite
+namespace TemperatureThresholdSensorLib
 {
-    public class Fixture<>
+    public interface ITempThresholdSensor
     {
+        public void HandleTempThresholdChange();
     }
 }

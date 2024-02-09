@@ -1,6 +1,8 @@
-﻿namespace AutomaticClimateControlSystem
+﻿using TemperatureThresholdSensorLib;
+
+namespace AutomaticClimateControlSystem
 {
-    public class TempThresholdSensor(IEventAggregator eventAggregator, float tempVal)
+    public class TempThresholdSensor(IEventAggregator eventAggregator, float tempVal):ITempThresholdSensor
     {
         private float thresholdTemp = tempVal;
         private float currentTemp;
