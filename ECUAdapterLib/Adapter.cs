@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+using IEventLib;
 namespace AutomaticClimateControlSystem
 {
     public class Adapter : ISubscriber
@@ -38,6 +38,11 @@ namespace AutomaticClimateControlSystem
                 double newTemp = EventHandlerFunctions[eventType].Invoke(_tempCalculator, @event);
                 _ecu.NotifyNewTemperature(newTemp);
             }
+
+        }
+
+        public void SubscribeToEvents(IEvent[] eventToSubscribe)
+        {
 
         }
 

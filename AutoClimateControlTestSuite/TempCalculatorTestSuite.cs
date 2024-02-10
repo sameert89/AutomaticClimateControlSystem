@@ -5,23 +5,27 @@ namespace AutoClimateControlTestSuite
 
     public class TempCalculatorTestsFixture : IDisposable
     {
-        private TempCalculator tempCalculator;
+        
+        public TempCalculator TempCalculator { get; private set; }
 
         public TempCalculatorTestsFixture()
         {
-            tempCalculator = new TempCalculator();
+            TempCalculator = new TempCalculator();
         }
 
         public void Dispose()
         {
-            
-        }
 
+        }
+    }
+     public class TempCalculatorTestSuite(TempCalculatorTestsFixture fixture) : IClassFixture<TempCalculatorTestsFixture> 
+    {
+        private readonly TempCalculatorTestsFixture _fixture = fixture;
         [Fact]
         public void DefaultInitializationTest()
         {
-            Assert.Equal(20.0, tempCalculator.CurrentTemperature);
-            Assert.Equal(0, tempCalculator.NumPassengers);
+            Assert.Equal(20.0, _fixture.TempCalculator.CurrentTemperature);
+            Assert.Equal(0, _fixture.TempCalculator.NumPassengers);
         }
 
         [Fact]
@@ -30,7 +34,7 @@ namespace AutoClimateControlTestSuite
             double newTemperature = 25.0;
             int numPassengers = 0;
             double expectedNewTemperature = 22.5;
-            double actualNewTemperature = tempCalculator.CalculateNewTemperature(newTemperature, numPassengers);
+            double actualNewTemperature = _fixture.TempCalculator.CalculateNewTemperature(newTemperature, numPassengers);
             Assert.Equal(expectedNewTemperature, actualNewTemperature);
         }
 
@@ -40,7 +44,7 @@ namespace AutoClimateControlTestSuite
             double initialTemperature = 20.0;
             int newNumPassengers = 5;
             double expectedNewTemperature = 22.5;
-            double actualNewTemperature = tempCalculator.CalculateNewTemperature(initialTemperature, newNumPassengers);
+            double actualNewTemperature = _fixture.TempCalculator.CalculateNewTemperature(initialTemperature, newNumPassengers);
             Assert.Equal(expectedNewTemperature, actualNewTemperature);
         }
 
@@ -50,7 +54,7 @@ namespace AutoClimateControlTestSuite
             double newTemperature = 20;
             int newNumPassengers = 0;
             double expectedNewTemperature = 20;
-            double actualNewTemperature = tempCalculator.CalculateNewTemperature(newTemperature, newNumPassengers);
+            double actualNewTemperature = _fixture.TempCalculator.CalculateNewTemperature(newTemperature, newNumPassengers);
             Assert.Equal(expectedNewTemperature, actualNewTemperature);
         }
 
@@ -60,7 +64,7 @@ namespace AutoClimateControlTestSuite
             double newTemperature = 15;
             int newNumPassengers = 0;
             double expectedNewTemperature = 17.5;
-            double actualNewTemperature = tempCalculator.CalculateNewTemperature(newTemperature, newNumPassengers);
+            double actualNewTemperature = _fixture.TempCalculator.CalculateNewTemperature(newTemperature, newNumPassengers);
             Assert.Equal(expectedNewTemperature, actualNewTemperature);
         }
     }
